@@ -6,7 +6,7 @@ def common_print_first(to_print: str) -> None:
 
 
 def common_print_second(to_print: str) -> None:
-	print(f"There’ll be {to_print} green bottles hanging on the wall.")
+	print(f"There'll be {to_print} green bottles hanging on the wall.")
 
 
 def solve() -> None:
