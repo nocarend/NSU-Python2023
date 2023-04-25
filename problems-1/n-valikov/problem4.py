@@ -1,12 +1,15 @@
 def common_print_first(to_print: str) -> None:
 	print(
-		2 * f"{to_print.capitalize()} green bottles hanging on the wall,"
+		2 * f"{to_print.capitalize()} green bottle"
+		    f"{'' if to_print == 'one' else 's'} hanging on the wall,"
 		    f"\n",
 		end='')
 
 
 def common_print_second(to_print: str) -> None:
-	print(f"There'll be {to_print} green bottles hanging on the wall.")
+	print(
+		f"There'll be {to_print} green bottle"
+		f"{'' if to_print == 'one' else 's'} hanging on the wall.")
 
 
 def solve() -> None:
