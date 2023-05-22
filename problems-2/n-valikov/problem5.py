@@ -1,14 +1,10 @@
-def is_prime(n: int) -> bool:
-	if n % 2 == 0:
-		return False
-	for number in range(3, int(n ** 0.5) + 1, 2):
-		if n % number == 0:
-			return False
-	return True
-
-
 def solve(n: int) -> [int]:
-	return [2] + [number for number in range(3, n + 1, 2) if is_prime(number)]
+	result = [2] if n > 1 else []
+	result.extend(
+		[number for number in range(3, n + 1, 2) if number % 2 and all(
+			[number % divisor for divisor in
+			 range(3, int(number ** 0.5) + 1, 2)])])
+	return result
 
 
 if __name__ == '__main__':
