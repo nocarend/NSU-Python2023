@@ -14,6 +14,6 @@ if __name__ == '__main__':
 	except ValueError:
 		from sys import stderr
 
-		stderr.write("Ожидалось число. Например: 7")
+		stderr.write("Ожидалось натуральное число. Например: 7")
 		exit(1)
 	print(solve(number))
