@@ -9,11 +9,17 @@
 
 if __name__ == '__main__':
 	print("Please, print a number.")
+	from sys import stderr
+
 	try:
 		number = int(input())
 	except ValueError:
-		from sys import stderr
-
 		stderr.write("Ожидалось натуральное число. Например: 7")
+		exit(1)
+	except EOFError:
+		stderr.write("Закончились входные данные.")
+		exit(1)
+	except Exception:
+		stderr.write("Случилось что-то плохое.")
 		exit(1)
 	print(solve(number))
