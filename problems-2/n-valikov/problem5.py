@@ -1,10 +1,7 @@
 ﻿def solve(n: int) -> [int]:
-	result = [2] if n > 1 else []
-	result.extend(
-		[number for number in range(3, n + 1, 2) if number % 2 and all(
-			[number % divisor for divisor in
-			 range(3, int(number ** 0.5) + 1, 2)])])
-	return result
+	return [number for number in range(2, n + 1) if (number % 2 and all(
+		[number % divisor for divisor in
+		 range(3, int(number ** 0.5) + 1, 2)]) or number == 2)]
 
 
 if __name__ == '__main__':
